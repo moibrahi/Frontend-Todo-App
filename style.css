@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.dark-theme{
+    --background: url(./images/bg-desktop-dark.jpg);
+    --background-color: hsl(235, 21%, 11%);
+    --color: white;
+    --content-background: hsl(235, 24%, 19%);
+    --image-theme: url(./images/icon-sun.svg);
+}
+
+.light-theme{
+    --background: url(./images/bg-desktop-light.jpg);
+    --background-color: white;
+    --color: black;
+    --content-background: white;
+    --image-theme: url(./images/icon-moon.svg);
+
+}
+
+.theme {
+    background: var(--image-theme) no-repeat;
+    cursor: pointer;
+}
+
+body{
+    background: var(--background);
+    background-color: var(--background-color);
+    background-position: top, bottom;
+    background-repeat: no-repeat, repeat;
+    background-size: contain;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--color);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+input[type=text] {
+    width: 99%;
+    height: 2rem;
+    border-radius: 5px;
+    background: transparent;
+    color: var(--color);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:18px;
+}
+
+header {
+    padding: 2rem;
+}
+
+header,main{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input[type=checkbox] {
+    display: None;
+    
+}
+input[type=checkbox]+label[for=theme]{
+    content:'';
+    display: block;
+    background: url(./images/icon-moon.svg) no-repeat;
+    height: 4rem;
+    width: 4rem;
+    background-size: 50%;
+    float: right;
+    margin: -2rem -2rem 0 0;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked+label[for=theme]{
+    background: url(./images/icon-sun.svg) no-repeat;
+}
+/*
+input[type=checkbox]+label[for=todo]{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    vertical-align: middle;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    
+    content: '';
+    padding: 0 1rem 0 1rem;
+    
+    border: 1px solid var(--color);
+}
+
+input[type=checkbox]:checked+label[for=todo]{
+    display: block;
+    content: '';
+    padding: 0 1rem 0 1rem;
+    background: url(./images/icon-check.svg) no-repeat, linear-gradient() hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}*/
+/*
+input[type=button] + label[for=remove]{
+    width: 1em;
+    height: 1em;
+    background: url(./images/icon-cross.svg), white;
+    display: block;
+    float: right;
+    cursor: pointer;
+    
+}*/
+
+
+ul li input[type=checkbox]:checked ~.text{
+    text-decoration: line-through;
+    color: hsl(234, 39%, 85%);
+}
+
+
+.add-item {
+    background: var(--content-background);
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    
+}
+
+.items {
+    background: var(--content-background);
+    border-radius: 5px;
+}
+
+#theme {
+    float: right;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    
+}
+
+ul li .text {
+    cursor: pointer;
+}
+
+.remove {
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    width: 1.7em;
+    height: 1.7em;
+    background: url(./images/icon-cross.svg) no-repeat;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.removeall {
+    /*
+    position: absolute;
+    right: 10px;
+    bottom: 1px;
+    display: inline-block;
+    width: 1.7em;
+    height: 1.7em;
+    background: url(./images/icon-cross.svg) no-repeat;
+    background-color: white;*/
+    position: absolute;
+    right: 10px;
+    background-color: red;
+    border: none;
+    color: white;
+    text-align: center;
+    
+    display: inline-block;
+    font-size: medium;
+    cursor: pointer;
+
+}
+
+.row {
+    position: relative;
+}
+
+
+
+li {
+    border-bottom: 1px solid var(--color);
+    padding: 0.5rem 0 0.5rem 0;
+    
+}
+
+.lastrow {
+    font-size: 9px;
+    border-radius: 5px;
+    position: relative;
+    padding: 0.5rem 0 0.5rem 0;
+   
+}
+
+.itemsleft {
+    font-size:medium;
+    margin: 0.5em;
+    
+}

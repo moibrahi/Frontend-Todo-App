@@ -3,34 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Todo app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+<body class="dark-theme">
+  <header>
+      <h1>TODO</h1>
+      <div class="themebox">
+        <input type="checkbox" id="theme" name="theme" checked>
+        <label for="theme"></label>
+      </div>
+      
+  </header>
 
-  Todo
+    <main>
+      <div class="add-item">
+        <input type="checkbox" id="add" name="add"> 
+        <input type="text" id="additem" name="additem" placeholder="Create new todo...">
+      </div>
+    <!-- Add dynamic number -->
+      <div class="items">
+        <ul class="listofitems" id="listss">
 
-  <!-- Add dynamic number --> items left
+          <li class="row">
+            <label class="item">
+              <input type="checkbox" id="todo" name="todo">
+              <label for="todo"></label>
+              <span class="text">Test 1</span>
+              
+            </label>
+            <input type="button" class="remove" id="remove1" name="remove" onClick="remove_item(this.id)">
+            <label for="remove"></label>
+          </li>
+          <li class="row">
+            <label class="item">
+              <input type="checkbox" id="todo" name="todo">
+              <label for="todo"></label>
+              <span class="text">Test 2</span>
+            </label>
+            <input type="button" class="remove" id="remove2" name="remove" onClick="remove_item(this.id)">
+            <label for="remove"></label>
+          </li>
+          <li class="row">
+            <label class="item">
+              <input type="checkbox" id="todo" name="todo">
+              <label for="todo"></label>
+              <span class="text">Test 3</span>
+            </label>
+            <input type="button" class="remove" id="remove3" name="remove" onClick="remove_item(this.id)">
+            <label for="remove"></label>
+          </li>
+        </ul>
+      
+          <div class="lastrow">
+            <div class="itemsleft"><span id="itemsleft">3</span> items left
+              <button type="button" class="removeall" id="removeall" name="removeall" onClick="remove_item(this.id)" text="Remove">Remove All</button>
+              <label for="removeall"></label>
+            </div>
+            <!--<div class="flex-row middle">
+              <label for="all">
+                <input type="radio" id="all" name="all" checked>All
+              </label>
+              <label for="active">
+                <input type="radio" id="active" name="active" >Active
+              </label>
+              <label for="completed">
+                <input type="radio" id="completed" name="completed" >Completed
+              </label>
+            </div>
+            <div class="clear right">
+              <input type="radio" id="clear" name="clear">Clear Completed
+            </div>-->
+          </div>
+        
+      </div>
+      
 
-  All
-  Active 
-  Completed
-
-  Clear Completed
-
-  Drag and drop to reorder list
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    </main>
   </div>
+    <div class="attribution">
+      <br/><br/><br/><br/>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Mohamed</a>.
+    </div>
 </body>
+
+<script src="/script.js"></script>
 </html>
